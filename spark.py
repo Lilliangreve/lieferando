@@ -29,20 +29,20 @@ sqlContext.sql("SELECT count(distinct MD.asin) FROM MD").show()
 sqlContext.sql("SELECT salesRank FROM MD")
 MetaData.select("brand").show()
 #upload to postgres:
-#Host: lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon
+#Host:
 #user=root
-#pass: zdHo2yd4JC5Th0
+#pass:
 Review_2 = 		(sqlContext.load(
 				source="jdbc", 
-				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=zdHo2yd4JC5Th0", 
+				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=", 
 				dbtable="Review"))
 				
 MetaData_2 = 	(sqlContext.load(
 				source="jdbc", 
-				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=zdHo2yd4JC5Th0", 
+				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=", 
 				dbtable="MetaData"))
 				
 Customer_2 = 	(sqlContext.load(
 				source="jdbc", 
-				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=zdHo2yd4JC5Th0", 
+				url="jdbc:postgresql://lilian-case.c9ensnzxd3la.eu-central-1.rds.amazonaws.com:5432/amazon/postgres?user=root&password=", 
 				dbtable="Customer"))
